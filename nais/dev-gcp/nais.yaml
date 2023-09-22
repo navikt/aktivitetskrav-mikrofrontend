@@ -22,6 +22,12 @@ spec:
     max: 4
   ingresses:
     - "https://www.intern.dev.nav.no/aktivitetskrav-mikrofrontend"
+  accessPolicy:
+    inbound:
+      rules:
+        - application: aktivitetskrav-backend
+          namespace: team-esyfo
+          cluster: dev-gcp
   resources:
     limits:
       cpu: "3"
