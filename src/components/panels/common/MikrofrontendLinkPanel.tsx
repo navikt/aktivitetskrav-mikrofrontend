@@ -20,17 +20,16 @@ import { TagMeta } from "./MikrofrontendPanel";
 import { logEvent } from "../../../amplitude/amplitude";
 
 interface Props {
-  href?: string;
   headingText: string;
   alertStyle: "info" | "success" | "warning" | "error";
   bodyText: string;
   tag?: TagMeta;
 }
 
-export const MikrofrontendLinkPanel = ({ href, headingText, alertStyle, bodyText, tag }: Props) => {
+export const MikrofrontendLinkPanel = ({ headingText, alertStyle, bodyText, tag }: Props) => {
   const logAndNavigate = async () => {
     await logEvent("navigere", { heading: headingText, body: bodyText });
-    window.location.href = href || aktivitetskravUrl;
+    window.location.href = aktivitetskravUrl;
   };
 
   return (

@@ -1,7 +1,6 @@
 import React from "react";
 import { MikrofrontendLinkPanel } from "./common/MikrofrontendLinkPanel";
-import { journalpostPageUrl } from "../../api/urls";
-import { MikrofrontendPanel, TagMeta } from "./common/MikrofrontendPanel";
+import { TagMeta } from "./common/MikrofrontendPanel";
 import { getShortDateFormat } from "../../utils/dateUtils";
 import { vurdererHeadingText } from "../../commonTexts";
 
@@ -20,19 +19,17 @@ export const ForhaandsvarselPanel = ({ journalpostId, fristDato }: Props) => {
 
   if (!journalpostId) {
     return (
-      //Skal normalt ikke skje, men for å ha en fallback dersom journalføring gikk galt eller noe.
-      <MikrofrontendPanel
+      //Ikke mange som vil få denne, da det er en mellomstate der vi ikke enda har mottatt dokumentet. Det blir batch-sendt til oss hvert 10 min.
+      <MikrofrontendLinkPanel
         headingText={vurdererHeadingText}
-        bodyText={`NAV vurderer å stanse sykepengene dine. Du vil motta et brev om dette i Mine Saker`}
-        alertStyle="warning"
-        tag={tagInfo}
+        bodyText="Les mer om aktivitetsplikten og hva den betyr for deg"
+        alertStyle="info"
       />
     );
   }
 
   return (
     <MikrofrontendLinkPanel
-      href={journalpostPageUrl(journalpostId)}
       headingText={vurdererHeadingText}
       bodyText="NAV vurderer å stanse sykepengene dine"
       alertStyle="warning"
