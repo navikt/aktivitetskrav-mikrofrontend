@@ -15,19 +15,21 @@ describe("<App />", () => {
     cy.get("#mikrofrontend__linkPanel").contains("NAV vurderer å stanse sykepengene dine");
   });
 
-  it("Displays regular panel for forhåndsvarsel if no journalpostid is present", () => {
+  it("Displays infopage if not document is present", () => {
     cy.mountWithStubs(<App />, {
       status: "FORHANDSVARSEL",
       sistVurdert: new Date().toISOString(),
       fristDato: addDaysToDate(new Date(), 14).toISOString(),
     });
 
-    cy.get("#mikrofrontend__panel").contains(vurdererHeadingText);
+    cy.get("#mikrofrontend__linkPanel").contains(vurdererHeadingText);
+    cy.get("#mikrofrontend__linkPanel").contains("Les mer");
   });
 
   it("Displays under arbeid if status ny", () => {
     cy.mountWithStubs(<App />, { status: "NY" });
 
     cy.get("#mikrofrontend__linkPanel").contains(vurdererHeadingText);
+    cy.get("#mikrofrontend__linkPanel").contains("Les mer");
   });
 });
