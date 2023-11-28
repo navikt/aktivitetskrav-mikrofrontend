@@ -60,6 +60,8 @@ export const BasePanel = styled.div`
 
 export const ChevronPanel = styled(BasePanel)`
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     box-shadow: var(--a-shadow-small);
@@ -98,6 +100,7 @@ export const MainContentRow = styled.div`
   @media (min-width: 648px) {
     padding: var(--a-spacing-4) var(--a-spacing-5) var(--a-spacing-5);
   }
+  flex: 1;
 `;
 
 export const MainContentText = styled(Heading)`
