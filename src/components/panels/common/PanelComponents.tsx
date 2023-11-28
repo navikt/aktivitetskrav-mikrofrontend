@@ -62,9 +62,6 @@ export const ChevronPanel = styled(BasePanel)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  gap: 1rem;
 
   &:hover {
     box-shadow: var(--a-shadow-small);
@@ -104,6 +101,9 @@ export const MainContentRow = styled.div`
     padding: var(--a-spacing-4) var(--a-spacing-5) var(--a-spacing-5);
   }
   flex: 1;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1rem;
 `;
 
 export const MainContentText = styled(Heading)`
