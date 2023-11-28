@@ -95,15 +95,13 @@ export const MainContentRow = styled.div`
   text-decoration: none;
   flex-direction: row;
   width: 100%;
+  height: 100%;
   align-items: center;
   padding: var(--a-spacing-3) var(--a-spacing-4) var(--a-spacing-4);
   @media (min-width: 648px) {
     padding: var(--a-spacing-4) var(--a-spacing-5) var(--a-spacing-5);
   }
   flex: 1;
-  height: 100%;
-  justify-content: space-between;
-  gap: 1rem;
 `;
 
 export const MainContentText = styled(Heading)`

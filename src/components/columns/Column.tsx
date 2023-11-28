@@ -9,6 +9,7 @@ interface Props {
 export const Column = styled.div<Props>`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: ${(props) => props.gap};
   padding-left: ${(props) => props.paddingLeft};
   padding-right: ${(props) => props.paddingRight};
