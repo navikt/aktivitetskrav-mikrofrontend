@@ -62,6 +62,9 @@ export const ChevronPanel = styled(BasePanel)`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1rem;
 
   &:hover {
     box-shadow: var(--a-shadow-small);
