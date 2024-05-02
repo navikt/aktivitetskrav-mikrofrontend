@@ -54,7 +54,7 @@
     "rollup-plugin-import-map": "3.0.0",
     "typescript": "5.4.5",
     "uuid": "^9.0.1",
-    "vite": "^5.2.10",
+    "vite": "^5.2.11",
     "vite-plugin-css-injected-by-js": "3.5.1"
   },
   "prettier": {
