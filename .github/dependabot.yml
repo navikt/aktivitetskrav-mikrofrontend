@@ -11,6 +11,8 @@ updates:
     directory: '/'
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: npm
     directory: '/'
@@ -20,8 +22,9 @@ updates:
       timezone: Europe/Oslo
     open-pull-requests-limit: 20
     registries: '*'
-    reviewers:
-      - ''
+    cooldown:
+      default-days: 7
+
     groups:
       aksel-dependencies:
         patterns:
